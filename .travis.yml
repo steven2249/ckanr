@@ -19,3 +19,6 @@ notifications:
 
 env:
   - TEST_DPLYR_INTERFACE=TRUE
+  
+after_success:
+  - Rscript -e 'covr::codecov()'
